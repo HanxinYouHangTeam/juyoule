@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+        <link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/home.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="location-wrap">
+                <span class="location">北京</span>
+                <span class="arrow-down"></span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="搜索您感兴趣的才艺" />
+            </div>
+        </header>
+        <section class="main">
+            <div class="tab-head" id="tab-head">
+                <span class="head-item selected" onClick="changeTab(0)">附近达人</span>
+                <span class="head-item" onClick="changeTab(1)">热点才艺</span>
+                <span class="head-item" onClick="changeTab(2)">新进达人</span>
+            </div>
+            <div class="tab-content">
+                <div class="tab-content-item show">
+                    <div class="slide-nav">
+                        <span class="slide-item slide-item-active">生日庆典</span>
+                        <span class="slide-item">商务宴请</span>
+                        <span class="slide-item">朋友聚会</span>
+                        <span class="slide-item">情侣浪漫</span>
+                        <span class="slide-item">分类1</span>
+                        <span class="slide-item">分类2</span>
+                    </div>
+                    <div class="waterfall">
+                        <div class="img-item">
+                            <img src="../../images/girl1.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl2.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl3.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl3.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl2.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl1.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content-item">
+                    <div class="slide-nav">
+                        <span class="slide-item slide-item-active">生日庆典</span>
+                        <span class="slide-item">商务宴请</span>
+                        <span class="slide-item">朋友聚会</span>
+                        <span class="slide-item">情侣浪漫</span>
+                        <span class="slide-item">分类1</span>
+                        <span class="slide-item">分类2</span>
+                    </div>
+                    <div class="waterfall">
+                        <div class="img-item">
+                            <img src="../../images/6.jpg" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl3.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl2.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl1.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl1.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content-item">
+                    <div class="slide-nav">
+                            <span class="slide-item slide-item-active">生日庆典</span>
+                            <span class="slide-item">商务宴请</span>
+                            <span class="slide-item">朋友聚会</span>
+                            <span class="slide-item">情侣浪漫</span>
+                            <span class="slide-item">分类1</span>
+                            <span class="slide-item">分类2</span>
+                    </div>
+                    <div class="waterfall">
+                        <div class="img-item">
+                            <img src="../../images/girl1.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/6.jpg" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl3.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl3.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl2.png" />
+                        </div>
+                        <div class="img-item">
+                            <img src="../../images/girl1.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-item">
+                首页
+            </div>
+            <div class="footer-item">
+                热点
+            </div>
+            <div class="footer-item">
+                消息
+            </div>
+            <div class="footer-item">
+                我的
+            </div>
+        </footer>
+        <script type="text/javascript">
+            window.onscroll=function(){
+                var topScroll =document.body.scrollTop;//滚动的距离,距离顶部的距离
+                var nav = document.getElementById("tab-head");//获取到导航栏id
+                if(topScroll <= 60){
+                    //当滚动距离小于250的时候执行下面的内容，也就是让导航栏恢复原状    
+                    nav.style.position = 'static';
+                }else{      
+                    //当滚动距离大于250px时执行下面的东西
+                    nav.style.position = 'fixed';
+                    nav.style.top = '0';
+                    nav.style.width = '100%';
+                    nav.style.background = 'linear-gradient(90deg,rgba(215,105,22,1) 0%,rgba(166,34,127,1) 63%,rgba(93,9,135,1) 100%)'
+                    console.log(topScroll)
+                }
+            }
+        </script>
+        <script type='text/javascript' src='../../js/tabChange.js' charset='utf-8'></script>
+        <!-- <script type='text/javascript' src='../../js/jquery.js' charset='utf-8'></script> -->
+    </body>
+</html>

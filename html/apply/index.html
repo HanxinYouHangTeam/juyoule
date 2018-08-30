@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <title>申请成为达人</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/apply.css" />
+    </head>
+    <body>
+        <div class="main">
+            <div class="status status-reviewing">
+                当前状态：审核中
+            </div>
+            <div class="status status-ok">
+                当前状态：审核成功
+            </div>
+            <div class="status status-fail">
+                当前状态：审核失败
+            </div>
+            <form method="post" action="xx.php"  name="upload_form">
+                <p class="title">基础信息</p>
+                <div class="base-info">
+                    <ul class="form-ul">
+                        <li>
+                            <span>姓名：</span>
+                            <input type="text"  name="name" class="short-input" />
+                            <span class="warning name-warning">请填写身份证姓名</span>
+                        </li>
+                        <li>
+                            <span>性别：</span>
+                            <div class="sex-wrap">
+                                <input type="radio" name="sex" value="man" id="man" checked="checked" class="radio-input" />
+                                <label for="man" >男性</label>
+                                <input type="radio" name="sex" value="woman" id="woman" class="radio-input" />
+                                <label for="woman">女性</label>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <span>年龄：</span>
+                            <input type="text"  name="age" />
+                        </li>
+                        <li>
+                            <span>民族：</span>
+                            <input type="text" name="nation" />
+                        </li>
+                        <li>
+                            <span>手机号：</span>
+                            <input type="text"  name="tel" />
+                        </li>
+                        <li>
+                            <span>身份证号码：</span>
+                            <input type="text"  name="idNumber" />
+                        </li>
+                        <li>
+                            <span>微信号：</span>
+                            <input type="text" name="wechat" />
+                        </li>
+                    </ul>
+                    <div class="idNumber">
+                        <p class="title-p">身份证认证：</p>
+                        <div class="img-upload"  onclick="idImgUpload.click()">
+                            <div class="upload-icon" id="id-upload-icon">
+                                <div class="horizontal-line"></div>
+                                <div class="verical-line"></div>
+                            </div>
+                            <input type="file" id="idImgUpload" class="hide">
+                            <img id="id-preview" src="" />
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <p class="title">节目信息</p>
+                <div class="show-info">
+                    <ul class="form-ul">
+                        <li>
+                            <span>节目名称：</span>
+                            <input type="text"  name="show-name"/>
+                            <span class="warning show-name-warning">8字符内</span>
+                        </li>
+                        <li>
+                            <span>节目时长：</span>
+                            <!-- <input type="text" name="sex" /> -->
+                            <div class="show-select">
+                                <span id="time-select-value" class="time-select-value">15分钟</span>
+                                <span class="arrow-down"></span>
+                                <ul class="show-select-ul">
+                                    <li key="15min">15分钟</li>
+                                    <li key="20min">20分钟</li>
+                                    <li key="25min">25分钟</li>
+                                    <li key="30min">30分钟</li>
+                                </ul>
+                                <span class="shows"></span> 
+                                <input name="time-select"  id="time-select" class="hide" />
+                            </div>
+                        </li>
+                        <li>
+                            <span>节目类型：</span>
+                            <!-- <input type="text"  name="age" /> -->
+
+                            <div class="type-select">
+                                <span id="type-select-value" class="type-select-value">歌曲</span>
+                                <span class="arrow-down"></span>
+                                <ul class="type-select-ul">
+                                    <li>歌曲</li>
+                                    <li>舞蹈</li>
+                                    <li>相声</li>
+                                    <li>杂技</li>
+                                    <li>模仿秀</li>
+                                    <li>魔术</li>
+                                    <li>小丑</li>
+                                    <li>京剧</li>
+                                    <li>川剧</li>
+                                    <li>二人转</li>
+                                    <li>手鼓</li>
+                                </ul>
+
+                                <span class="types"></span> 
+                                <input name="type-select" id="type-select" class="hide" />
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <div class="item heightFix">
+                        <span>适合场景：</span>
+                        
+                        <div class="checkbox-wrap">
+                            <span class="relaPosition">
+                                <input type="checkbox" name="scene" id="birthday" value="生日庆典" />
+                                <label for="birthday" >生日庆典</label>
+                            </span>
+                            <span class="relaPosition">
+                                <input type="checkbox" name="scene" id="business" value="商务宴请" />
+                                <label for="business" >商务宴请</label>
+                            </span>
+                            <span class="relaPosition">
+                                <input type="checkbox" name="scene" id="friend" value="朋友聚会" />
+                                <label for="friend" >朋友聚会</label>
+                            </span>
+                            <span class="relaPosition">
+                                <input type="checkbox" name="scene" id="lover" value="情侣浪漫" />
+                                <label for="lover" >情侣浪漫</label>
+                            </span>
+                            <span class="relaPosition">
+                                <input type="checkbox" name="scene" id="classmate" value="同学聚会" />
+                                <label for="classmate" >同学聚会</label>
+                            </span>
+                            <span class="relaPosition">
+                                <input type="checkbox" name="scene" id="wedding" value="婚礼仪式" />
+                                <label for="wedding" >婚礼仪式</label>
+                            </span>
+                            <span class="relaPosition">
+                                <input type="checkbox" name="scene" id="family" value="家庭聚会" />
+                                <label for="family" >家庭聚会</label>
+                            </span>
+                            <span class="relaPosition">
+                                <input type="checkbox" name="scene" id="company" value="公司年会" />
+                                <label for="company" >公司年会</label>
+                            </span>  
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span>达人星球：</span>
+                        <div class="item-des">
+                            <textarea name="talent-des" class="text-area" placeholder="请填写个人经历介绍（300字符之内）"></textarea>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span>达人专辑：</span>
+                        <div class="item-des">
+                            <textarea name="talent-special" class="text-area" placeholder="请填写节目介绍（300字符之内）"></textarea>
+                        </div>
+                    </div>
+                    <div class="item heightFix iphone5Fix">
+                        <span class="item-img-title">照片：</span>
+                        <div class="img-upload-wrap">
+                            <div class="img-upload" onclick="talentImg1.click()">
+                                <div class="upload-icon" id="talentImg1-icon">
+                                    <div class="horizontal-line"></div>
+                                    <div class="verical-line"></div>
+                                </div>
+                                <input type="file" id="talentImg1" class="hide">
+                                <img id="talentImg1-preview" src="" />
+                            </div>
+                        </div>
+                        <div class="img-upload-wrap">
+                            <div class="img-upload" onclick="talentImg2.click()">
+                                <div class="upload-icon" id="talentImg2-icon">
+                                    <div class="horizontal-line"></div>
+                                    <div class="verical-line"></div>
+                                </div>
+                                <input type="file" id="talentImg2" class="hide">
+                                <img id="talentImg2-preview" src="" />
+                            </div>
+                        </div>
+                        <div class="img-upload-wrap">
+                            <div class="img-upload" onclick="talentImg3.click()">
+                                <div class="upload-icon" id="talentImg3-icon">
+                                    <div class="horizontal-line"></div>
+                                    <div class="verical-line"></div>
+                                </div>
+                                <input type="file" id="talentImg3" class="hide">
+                                <img id="talentImg3-preview" src="" />
+                            </div>
+                        </div>
+                        
+    
+                    </div>
+                    <div class="video">
+                        <p class="title-p">视频：</p>
+                        <div class="video-des">
+                            <p class="white">请发送至少一段完整表演视频至</p>
+                            <p class="red">juyoule@iembrace.com.cn</p>
+                            <p class="white">邮件命名规则</p>
+                            <p class="red">例：【城市】+【真实姓名】+表演形式</p>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" value="确认提交" class="submit" />
+            </form>
+        </div>
+        
+    <script type='text/javascript' src='../../js/jquery.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../js/select.js' charset='utf-8'></script>
+    <script type='text/javascript' src='../../js/preloadImg.js' charset='utf-8'></script>
+    </body>
+</html>

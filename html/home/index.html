@@ -34,6 +34,14 @@
                     <div class="waterfall">
                         <div class="img-item">
                             <img src="../../images/girl1.png" />
+                            <!-- <video 
+                                src="../../images/video/1.mp4" 
+                                poster="../../images/5.jpg"
+                                x5-video-player-fullscreen="true"
+                                controls="controls"
+                                id="video1"
+                                onClick="fullscreen()"
+                            ></video> -->
                         </div>
                         <div class="img-item">
                             <img src="../../images/girl2.png" />
@@ -127,6 +135,13 @@
             </div>
         </footer>
         <script type="text/javascript">
+
+            function fullscreen(){
+                var a = document.getElementById('video1');
+                console.log(a)
+                a.webkitrequestFullscreen();
+            }
+
             window.onscroll=function(){
                 var topScroll =document.body.scrollTop;//滚动的距离,距离顶部的距离
                 var nav = document.getElementById("tab-head");//获取到导航栏id
